@@ -1,0 +1,17 @@
+<% content_for :title do %>Contact<% end %>
+<h3>Contact</h3>
+<div class="form">
+  <%= simple_form_for @contact, html: { class: 'form-inline' } do |form| %>
+    <%= form.error_notification %>
+    <%= form.input :name %>
+    <br/>
+    <br/>
+    <%= form.input :email %>
+    <br/>
+    <br/>
+    <%= form.input :content, as: :text, label: 'Message', input_html: { size: '40x5' } %>
+    <br/>
+    <br/>
+    <%= form.button :submit, class: 'submit' %>
+  <% end %>
+</div>
